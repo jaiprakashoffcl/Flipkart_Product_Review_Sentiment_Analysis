@@ -27,7 +27,9 @@ jobs:
 
     - name: Install Dependencies and Build
       run: |
-        conda install --file environment.yml
+        conda env create -n myenv python=3.8
+        conda activate myenv
+        conda install pytest pandas
         # Add any additional build or installation steps here
 
     - name: Run Tests
