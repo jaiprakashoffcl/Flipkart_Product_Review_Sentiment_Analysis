@@ -16,22 +16,14 @@ jobs:
     - name: Set up Anaconda
       uses: fdiblen/anaconda-action@0.1.20
       with:
-        # Environment name (you can provide a custom name).
         envName: myenv
-        # Environment file name (if it's named "environment.yml").
         envFileName: environment.yml
-        # Desired Python version to create a conda environment.
-        pythonVersion: 3.8  # Replace with your desired Python version
-        # Extra anaconda channels to use (if any).
-        channels: conda-forge  # Replace with your desired channels
-        # Activate the new environment (true or false).
+        pythonVersion: 3.8
+        channels: conda-forge
         activateEnv: true
-        # Enable package publishing (true or false).
-        publish: false  # Set to true if you want to publish the package
-        # Channel to publish the anaconda package (if you enable publishing).
-        publishChannel: mychannel  # Replace with your desired channel
-        # Token to access Anaconda Cloud (if you enable publishing).
-        anacondaToken: ${{ secrets.ANACONDA_TOKEN }}  # Store your token as a secret
+        publish: false
+        publishChannel: mychannel
+        anacondaToken: ${{ secrets.ANACONDA_TOKEN }}
 
     - name: Install Dependencies and Build
       run: |
@@ -40,7 +32,10 @@ jobs:
 
     - name: Run Tests
       run: |
-        # Add commands to run your tests here
+        # Replace this comment with the command to run your tests
+        # For example, if you're using pytest:
+        pytest
+        # Adjust the test command to match your project's testing framework
 
     - name: Cleanup
       run: |
