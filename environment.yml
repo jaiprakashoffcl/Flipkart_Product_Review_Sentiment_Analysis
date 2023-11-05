@@ -40,3 +40,6 @@ jobs:
     - name: Cleanup
       run: |
         # Add any cleanup or finalization steps here
+
+    - name: Run Tests
+  run: pytest  # Replace with the appropriate command to run your tesstd
