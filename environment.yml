@@ -31,15 +31,8 @@ jobs:
         # Add any additional build or installation steps here
 
     - name: Run Tests
-      run: |
-        # Replace this comment with the command to run your tests
-        # For example, if you're using pytest:
-        pytest
-        # Adjust the test command to match your project's testing framework
+      run: pytest  # Replace with the appropriate command to run your tests
 
     - name: Cleanup
       run: |
         # Add any cleanup or finalization steps here
-
-    - name: Run Tests
-  run: pytest  # Replace with the appropriate command to run your tesstd
