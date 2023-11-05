@@ -1,0 +1,21 @@
+- name: Anaconda-Action
+  # You may pin to the exact commit or the version.
+  # uses: fdiblen/anaconda-action@be27c7e5ae6222eab157d4b4b3c099678de45659
+  uses: fdiblen/anaconda-action@0.1.20
+  with:
+    # Environment name.
+    envName: # default is environment.yml
+    # Environment file name.
+    envFileName: # default is environment.yml
+    # Desired Python version to create a conda environment.
+    pythonVersion: # optional, default is default
+    # Extra anaconda channels to use.
+    channels: # optional, default is 
+    # Activate the new environment.
+    activateEnv: # optional, default is true
+    # Enable package publishing.
+    publish: # optional, default is false
+    # Channel to publish the anaconda package.
+    publishChannel: # optional, default is 
+    # Token to access to anaconda cloud.
+    anacondaToken: # optional, default is 
