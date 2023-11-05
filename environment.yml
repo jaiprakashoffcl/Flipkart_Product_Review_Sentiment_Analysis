@@ -38,3 +38,11 @@ jobs:
     - name: Cleanup
       run: |
         # Add any cleanup or finalization steps here
+
+   -  name: myenv  # Your environment name
+       dependencies:
+          - python=3.8
+          - pytest
+          - pandas
+          # Add other dependencies as needed
+  
