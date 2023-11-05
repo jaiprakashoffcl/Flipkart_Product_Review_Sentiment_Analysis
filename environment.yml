@@ -1,21 +1,47 @@
-- name: Anaconda-Action
-  # You may pin to the exact commit or the version.
-  # uses: fdiblen/anaconda-action@be27c7e5ae6222eab157d4b4b3c099678de45659
-  uses: fdiblen/anaconda-action@0.1.20
-  with:
-    # Environment name.
-    envName: # default is environment.yml
-    # Environment file name.
-    envFileName: # default is environment.yml
-    # Desired Python version to create a conda environment.
-    pythonVersion: # optional, default is default
-    # Extra anaconda channels to use.
-    channels: # optional, default is 
-    # Activate the new environment.
-    activateEnv: # optional, default is true
-    # Enable package publishing.
-    publish: # optional, default is false
-    # Channel to publish the anaconda package.
-    publishChannel: # optional, default is 
-    # Token to access to anaconda cloud.
-    anacondaToken: # optional, default is 
+name: Anaconda-Action
+
+on:
+  push:
+    branches:
+      - main  # Replace with your target branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Anaconda
+      uses: fdiblen/anaconda-action@0.1.20
+      with:
+        # Environment name (you can provide a custom name).
+        envName: myenv
+        # Environment file name (if it's named "environment.yml").
+        envFileName: environment.yml
+        # Desired Python version to create a conda environment.
+        pythonVersion: 3.8  # Replace with your desired Python version
+        # Extra anaconda channels to use (if any).
+        channels: conda-forge  # Replace with your desired channels
+        # Activate the new environment (true or false).
+        activateEnv: true
+        # Enable package publishing (true or false).
+        publish: false  # Set to true if you want to publish the package
+        # Channel to publish the anaconda package (if you enable publishing).
+        publishChannel: mychannel  # Replace with your desired channel
+        # Token to access Anaconda Cloud (if you enable publishing).
+        anacondaToken: ${{ secrets.ANACONDA_TOKEN }}  # Store your token as a secret
+
+    - name: Install Dependencies and Build
+      run: |
+        conda install --file environment.yml
+        # Add any additional build or installation steps here
+
+    - name: Run Tests
+      run: |
+        # Add commands to run your tests here
+
+    - name: Cleanup
+      run: |
+        # Add any cleanup or finalization steps here
