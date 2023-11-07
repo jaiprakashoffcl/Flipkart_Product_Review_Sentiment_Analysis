@@ -5,6 +5,8 @@
 Data : Kaggle
 
       https://www.kaggle.com/datasets/niraliivaghani/flipkart-product-customer-reviews-dataset
+In this my project i didn't add my dataset.csv file coz it is too large so, I've given dataset link here!
+You first need to download the data and execute the given files 😉.
       
       
 - This analysis consists of Exploratory Data Analysis for free text data from the Flipkart Product Reviews dataset. 
