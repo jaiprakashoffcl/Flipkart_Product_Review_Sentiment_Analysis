@@ -87,6 +87,8 @@ Notebook Details:
   alt="Product Name Topic Modelling"
   title="Product Name Topic Modelling"
   style="display: inline-block; margin: 0 auto; max-width: 50px">
-
+  
+<br>
+<br>
 
 if any clarifications regarding about my project, contact: jaiprakash292033@gmail.com
