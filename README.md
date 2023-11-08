@@ -1,6 +1,6 @@
 # Flipkart Product Reviews
 
-## Sentiment Analysis (DistilBERT) | Topic Modelling 
+## Sentiment Analysis 
 
 Data : Kaggle
 
@@ -88,3 +88,5 @@ Notebook Details:
   title="Product Name Topic Modelling"
   style="display: inline-block; margin: 0 auto; max-width: 50px">
 
+
+if any clarifications regarding about my project, contact: jaiprakash292033@gmail.com
