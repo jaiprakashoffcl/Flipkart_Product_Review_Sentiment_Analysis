@@ -10,7 +10,7 @@ In this my project i didn't add my dataset.csv file coz it is too large so, I've
 You first need to download the data and execute the given files 😉.
 
 nd you can install on command prompt the following command as:
-https://github.com/jaiprakashoffcl/Flipkart_Product_Review_Sentimental_Analysis.git
+( https://github.com/jaiprakashoffcl/Flipkart_Product_Review_Sentimental_Analysis.git )
    
 - This analysis consists of Exploratory Data Analysis for free text data from the Flipkart Product Reviews dataset. 
 - Sentiment analysis was performed using DistilBERT model from huggingface by fine-tuning it for the product reviews data. 
