@@ -17,7 +17,6 @@ nd you can install on command prompt the following command as:
 - Topic modelling was performed using BERTopic with a spacy model for embeddings. 
 
 
-
 ------------------------------------------------------------------------------
 <br>
 <br>
