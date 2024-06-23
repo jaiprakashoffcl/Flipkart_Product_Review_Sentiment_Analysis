@@ -14,11 +14,9 @@ jobs:
     - name: Make a commit
       run: |
         date >> README.md
-        git config --global user.name 'jaiprakashoffcl'
-        git config --global user.email 'jaiprakash292033@gmail.com'
         git add README.md
-        git commit -m "Daily commit"
-        git push
+        git commit -m "Updated README.md with current date"
+        git push origin HEAD:${{ github.ref }}
       env:
-        REPO: ${{ github.repository }}
-        PAT: ${{ secrets.GITHUB_TOKEN }}
+        GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+        GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
